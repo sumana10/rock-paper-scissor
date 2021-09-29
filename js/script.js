@@ -62,7 +62,7 @@ const pickComputerHand = (hand) => {
 const checkWin = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "scissors") {
     setResult("YOU LOSE!");
-	
+	  setScore(SCORE - 1);
     
   }
   if (userHand == "paper" && cpHand == "rock") {
@@ -83,7 +83,7 @@ const checkWin = (userHand, cpHand) => {
   }
   if (userHand == "rock" && cpHand == "paper") {
     setResult("YOU LOSE!");
-
+    setScore(SCORE - 1);
     
   }
   if (userHand == "rock" && cpHand == "rock") {
@@ -96,7 +96,7 @@ const checkWin = (userHand, cpHand) => {
   }
   if (userHand == "scissors" && cpHand == "rock") {
     setResult("YOU LOSE!");
-	
+	  setScore(SCORE - 1);
     
   }
   if (userHand == "scissors" && cpHand == "paper") {
