@@ -32,7 +32,7 @@ const handOptions = {
 
 
 let USERSCORE = 0;
-
+let COMPSCORE = 0;
 
 const pickUserHand = (hand) => {
   
@@ -63,13 +63,13 @@ const pickComputerHand = (hand) => {
 const checkWin = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "scissors") {
     setResult("YOU LOSE!");
-	  setScore(USERSCORE - 1);
+	  setScore(USERSCORE - 1,COMPSCORE + 1);
 	  
     
   }
   if (userHand == "paper" && cpHand == "rock") {
     setResult("YOU WIN!");
-    setScore(USERSCORE + 1);
+    setScore(USERSCORE + 1,COMPSCORE - 1);
     
   
     
@@ -80,14 +80,14 @@ const checkWin = (userHand, cpHand) => {
   }
   if (userHand == "rock" && cpHand == "scissors") {
     setResult("YOU WIN!");
-    setScore(USERSCORE + 1);
+    setScore(USERSCORE + 1,COMPSCORE - 1);
     
    
     
   }
   if (userHand == "rock" && cpHand == "paper") {
     setResult("YOU LOSE!");
-    setScore(USERSCORE - 1);
+    setScore(USERSCORE - 1,COMPSCORE + 1);
     
     
   }
@@ -101,13 +101,13 @@ const checkWin = (userHand, cpHand) => {
   }
   if (userHand == "scissors" && cpHand == "rock") {
     setResult("YOU LOSE!");
-	  setScore(USERSCORE - 1);
+	  setScore(USERSCORE - 1,COMPSCORE + 1);
 	 
     
   }
   if (userHand == "scissors" && cpHand == "paper") {
     setResult("YOU WIN!");
-    setScore(USERSCORE + 1);
+    setScore(USERSCORE + 1,COMPSCORE - 1);
     
    
     
@@ -129,11 +129,13 @@ const setResult = (decision) => {
     playSound(decision);
 }
 
-const setScore = (Score) => {
-	
-  USERSCORE = (Score>=0) ? Score : USERSCORE;
+const setScore = (Score1, Score2) => {
+  USERSCORE = (Score1>0) ? Score1 : USERSCORE;
+  COMPSCORE = (Score2>0) ? Score2 : COMPSCORE;
+  console.log(Score1);
+  console.log(Score2);
   
-  document.querySelector(".score h1").innerText = USERSCORE;
+  document.querySelector(".score h1").innerText = Score1;
   
 }
 

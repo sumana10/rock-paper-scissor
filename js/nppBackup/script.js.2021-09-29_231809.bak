@@ -130,8 +130,9 @@ const setResult = (decision) => {
 }
 
 const setScore = (Score) => {
-	
   USERSCORE = (Score>=0) ? Score : USERSCORE;
+  
+ 
   
   document.querySelector(".score h1").innerText = USERSCORE;
   
