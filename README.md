@@ -3,6 +3,11 @@
 
 Rock paper scissors is a hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock", "paper", and "scissors". 
 
+## Screenshots
+
+![App Screenshot](https://github.com/sumana10/rock-paper-scissor/blob/master/assets/screencapture-sumana10-github-io-rock-paper-scissor-2021-09-29-23_59_25.png)
+
+
 
 ## The Challenge
 
